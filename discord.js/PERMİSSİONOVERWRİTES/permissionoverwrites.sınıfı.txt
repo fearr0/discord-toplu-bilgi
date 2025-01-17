@@ -1,0 +1,4 @@
+Kanal izinlerini ayarlamak için kullanılır.
+
+permissionOverwrites.edit(userOrRole, options)
+permissionOverwrites.delete()

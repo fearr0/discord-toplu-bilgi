@@ -1,0 +1,21 @@
+Kanallarla ilgili işlemleri yapar.
+
+channel.send(content, options)
+channel.clone()
+channel.delete()
+channel.edit(options)
+channel.fetch()
+channel.setName(name)
+channel.setParent(category)
+channel.bulkDelete(messages, options)
+
+
+client.on('messageCreate', (message) => {
+    if (message.content === '!ping') {
+        message.channel.send('Pong!');
+    }
+});
+
+channel.bulkDelete(10).then(() => {
+    console.log('10 mesaj silindi.');
+});

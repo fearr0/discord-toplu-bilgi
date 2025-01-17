@@ -1,0 +1,23 @@
+Discord sunucularını temsil eder.
+
+guild.fetch()
+guild.channels.create(name, options)
+guild.roles.create(options)
+guild.members.fetch(id)
+guild.leave()
+guild.fetchOwner()
+guild.setName(name)
+guild.setIcon(icon)
+
+
+client.on('ready', () => {
+    const guild = client.guilds.cache.get('GUILD_ID');
+    guild.channels.create('yeni-kanal', {
+        type: 0 // Text kanalı
+    }).then(channel => console.log(`${channel.name} oluşturuldu.`));
+});
+
+guild.roles.create({
+    name: 'Yeni Rol',
+    color: 'BLUE',
+}).then(role => console.log(`${role.name} rolü oluşturuldu!`));

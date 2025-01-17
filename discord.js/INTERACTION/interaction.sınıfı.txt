@@ -1,0 +1,21 @@
+Slash komutları ve düğmeler gibi etkileşimleri yönetir.
+
+interaction.reply(content, options)
+interaction.deferReply(options)
+interaction.editReply(content)
+interaction.followUp(content)
+interaction.isCommand()
+interaction.isButton()
+interaction.isSelectMenu()
+
+
+client.on('interactionCreate', (interaction) => {
+    if (interaction.isCommand() && interaction.commandName === 'ping') {
+        interaction.reply('Pong!');
+    }
+});
+
+interaction.deferReply();
+setTimeout(() => {
+    interaction.editReply('Biraz geciktim ama işte buradayım!');
+}, 3000);

@@ -1,0 +1,20 @@
+Kullanıcılar ve sunucu üyeleriyle ilgilidir.
+
+user.send(content)
+user.fetch()
+guildMember.kick(reason)
+guildMember.ban(options)
+guildMember.roles.add(role)
+guildMember.roles.remove(role)
+guildMember.setNickname(nickname)
+
+
+client.on('messageCreate', (message) => {
+    if (message.content === '!dm') {
+        message.author.send('Merhaba! Özel mesaj attım.');
+    }
+});
+
+member.kick('Kurallara uymadığı için').then(() => {
+    console.log(`${member.user.tag} sunucudan atıldı.`);
+});

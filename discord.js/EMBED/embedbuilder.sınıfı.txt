@@ -1,0 +1,21 @@
+Gösterişli mesajlar oluşturmak için kullanılır.
+
+new EmbedBuilder()
+embed.setTitle(title)
+embed.setDescription(description)
+embed.setColor(color)
+embed.addFields(fields)
+embed.setThumbnail(url)
+embed.setImage(url)
+embed.setFooter(footer)
+
+
+const { EmbedBuilder } = require('discord.js');
+
+const embed = new EmbedBuilder()
+    .setTitle('Başlık')
+    .setDescription('Bu bir açıklama')
+    .setColor(0x00AE86)
+    .setThumbnail('https://example.com/image.png');
+
+message.channel.send({ embeds: [embed] });

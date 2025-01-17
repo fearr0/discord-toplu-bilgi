@@ -1,0 +1,22 @@
+Gönderilen mesajları temsil eder.
+
+message.reply(content, options)
+message.delete()
+message.react(emoji)
+message.pin()
+message.unpin()
+message.edit(content, options)
+message.fetchReference()
+
+
+client.on('messageCreate', (message) => {
+    if (message.content === 'Merhaba') {
+        message.reply('Merhaba, nasılsın?');
+    }
+});
+
+client.on('messageCreate', (message) => {
+    if (message.content === 'like') {
+        message.react('👍');
+    }
+});

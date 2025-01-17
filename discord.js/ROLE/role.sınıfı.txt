@@ -1,0 +1,15 @@
+Rolleri yönetmek için kullanılır.
+
+role.edit(options)
+role.delete()
+role.setName(name)
+role.setPermissions(permissions)
+role.setPosition(position)
+
+
+
+guild.roles.fetch('ROLE_ID').then(role => {
+    role.setName('Yeni Rol İsmi');
+});
+
+role.setPermissions(['SEND_MESSAGES', 'VIEW_CHANNEL']);

@@ -1,0 +1,18 @@
+Discord botunun temelini oluşturur.
+
+client.login(token)
+client.on(event, listener)
+client.once(event, listener)
+client.destroy()
+client.user.setActivity(activity, options)
+client.user.setStatus(status)
+
+
+const { Client, GatewayIntentBits } = require('discord.js');
+const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+
+client.on('ready', () => {
+    console.log(`Bot ${client.user.tag} olarak giriş yaptı!`);
+});
+
+client.login('YOUR_BOT_TOKEN');

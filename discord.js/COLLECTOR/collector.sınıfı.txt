@@ -1,0 +1,17 @@
+Mesaj ve reaksiyon toplama işlevleri için kullanılır.
+
+collector.on(event, listener)
+collector.stop(reason)
+collector.resetTimer(options)
+
+
+const filter = m => m.content.includes('evet');
+const collector = channel.createMessageCollector({ filter, time: 15000 });
+
+collector.on('collect', m => {
+    console.log(`Toplanan mesaj: ${m.content}`);
+});
+
+collector.on('end', collected => {
+    console.log(`Toplam ${collected.size} mesaj toplandı.`);
+});
